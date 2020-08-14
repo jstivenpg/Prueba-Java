@@ -1,0 +1,11 @@
+SQL 1
+
+SELECT g.nombreGrupo, count(c.idCurso) AS cantidadcursos FROM Curso c join grupo g ON c.idGrupo = g.idGrupo;
+
+SQL 2
+
+SELECT idCurso FROM Curso WHERE idCategoria IN (SELECT idCategoria FROM Categoria WHERE idCategoria = 0 );
+
+SQL 3
+
+select ct.nombreCategoria Categoria, cu.nombreCurso, cues.nombreCuestionario, g.nombreGrupo from Categoria ct join Curso cu join Cuestionario cues join grupo g;
